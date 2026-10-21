@@ -2,6 +2,9 @@ const navToggle=document.querySelector('.menu-toggle');
 const nav=document.querySelector('.main-nav');
 if(navToggle&&nav){navToggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');navToggle.setAttribute('aria-expanded',String(open));navToggle.setAttribute('aria-label',open?'Close navigation':'Open navigation')});nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{nav.classList.remove('open');navToggle.setAttribute('aria-expanded','false')}))}
 
+// Reveal sections only after they enter the viewport; the initial viewport stays still on load.
+if('IntersectionObserver'in window&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){const revealTargets=document.querySelectorAll('.intro,.featured,.quote,.visit-strip,.dish-card,.gallery-tile,.contact-details,.reservation-form,.map-panel');const revealObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');revealObserver.unobserve(entry.target)}})},{threshold:.12});revealTargets.forEach(target=>{if(target.getBoundingClientRect().top>=window.innerHeight){target.classList.add('scroll-reveal');revealObserver.observe(target)}})}
+
 document.querySelectorAll('.filter-chip').forEach(chip=>chip.addEventListener('click',()=>{document.querySelectorAll('.filter-chip').forEach(item=>item.classList.remove('selected'));chip.classList.add('selected');const filter=chip.dataset.filter;document.querySelectorAll('.dish-card').forEach(card=>{card.hidden=filter!=='all'&&card.dataset.category!==filter})}));
 
 const lightbox=document.querySelector('.lightbox');
