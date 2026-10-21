@@ -57,3 +57,47 @@
   .reservation-form .submit-button:hover{transform:translateY(-4px)}
 }
 
+/* Reference palette: near-black espresso, warm cream, and restrained brass. */
+:root{--paper:#171513;--ink:#efe4ce;--muted:#b9ad96;--olive:#c6a66e;--line:#443d32}
+body{background:radial-gradient(ellipse at 14% 0%,rgba(107,76,39,.12),transparent 38%),var(--paper)}
+.site-header{border-bottom-color:rgba(239,228,206,.1)}
+.main-nav>a:not(.nav-book),.lead,.hero-meta,.dish-info p,.detail-block p,.detail-block>a:not(.text-link),.menu-toolbar>p,.form-intro{color:#c8bda7}
+.nav-book{border-color:#746651}
+.button-dark{background:#c6a66e;color:#171513}
+.button-dark:hover{background:#d8bb87}
+.button-light{background:#efe4ce;color:#211b14}
+.text-link{border-bottom-color:#897a60}
+.featured{background:#312a20}
+.featured-photo{filter:brightness(.82) saturate(.82)}
+.site-footer{background:#100f0d}
+.reservation-form{background:#28231d}
+.reservation-form label{color:#e8dcc4}
+.reservation-form input,.reservation-form select{background:#171513;border-color:#554a39}
+.form-note{color:#c1b59d}
+.map-panel{background:linear-gradient(135deg,#27221c,#383025);color:#efe4ce}
+.map-placeholder a{border-color:#c6a66e}
+.map-marker{color:#c6a66e}
+.filter-chip{border-color:#594f40;color:#d5c8b0}
+.filter-chip.selected,.filter-chip:hover{background:#c6a66e;border-color:#c6a66e;color:#171513}
+.menu-note{border-top-color:var(--line);color:#c8bda7}
+@media(max-width:850px){.main-nav{background:#1b1916;box-shadow:0 12px 18px rgba(0,0,0,.42)}.hero-image{background:linear-gradient(0deg,var(--paper) 0%,rgba(23,21,19,.12) 36%),url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1300&q=85') center/cover}}
+@media(max-width:600px){
+  .hero{min-height:620px}
+  .hero-image{inset:0 0 44% 0}
+  .hero-copy{padding:0 7% 27px}
+  .hero-stamp{display:none}
+  .hero-meta{margin-top:24px}
+  .featured-photo{min-height:215px}
+  .featured-copy{padding:34px 8%}
+  .gallery-grid{grid-template-rows:160px 135px 135px;gap:8px;padding-bottom:38px}
+  .gallery-tile.tile-tall{grid-row:span 2}
+  .dish-image{height:132px}
+  .map-panel{height:145px;margin-bottom:42px}
+  .site-footer{grid-template-columns:1fr auto;gap:12px;padding:25px 6% 17px}
+  .footer-mark{font-size:18px;letter-spacing:.13em}
+  .footer-mark span{font-size:7px}
+  .site-footer>p{grid-column:auto;grid-row:auto;text-align:right;font-size:9px;line-height:1.55}
+  .footer-links{grid-column:1/-1;grid-row:auto;justify-content:flex-start;gap:16px;margin-top:4px;font-size:9px}
+  .site-footer small{grid-column:1/-1;padding-top:11px;font-size:6px}
+}
+
