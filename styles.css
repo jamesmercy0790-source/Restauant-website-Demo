@@ -23,3 +23,37 @@
   .dish-card.scroll-reveal:nth-child(3n){transition-delay:.14s}
 }
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+
+/* Mature charcoal palette with warm olive and brass accents. */
+:root{--paper:#252923;--ink:#eeeae0;--muted:#b9b6aa;--olive:#b1ba96;--line:#484b43}
+.site-header{border-bottom-color:rgba(238,234,224,.1)}
+.main-nav>a:not(.nav-book),.lead,.hero-meta,.dish-info p,.detail-block p,.detail-block>a:not(.text-link){color:#c3c1b7}
+.nav-book{border-color:#73766b}
+.button-dark{background:#c7b58d;color:#252923}
+.button-dark:hover{background:#ddcba1}
+.text-link{border-bottom-color:#85877a}
+.site-footer{background:#191c18}
+.hero-image{background:linear-gradient(90deg,var(--paper) 0%,rgba(37,41,35,.84) 12%,rgba(37,41,35,.06) 48%),linear-gradient(0deg,rgba(18,19,16,.25),transparent 45%),url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1800&q=90') center/cover}
+.reservation-form{background:#30342d}
+.reservation-form label{color:#e0ddd2}
+.reservation-form input,.reservation-form select{background:#252923;border-color:#55594f}
+.form-note{color:#c2bfb4}
+.map-panel{background:linear-gradient(135deg,#363b33,#4a5142);color:#eeeae0}
+.map-placeholder a{border-color:#a7ad91}
+.menu-toolbar>p,.form-intro{color:#c3c1b7}
+.filter-chip{border-color:#5a5d53;color:#d0cec3}
+.map-marker{color:#b1ba96}
+@media(max-width:850px){.hero-image{inset:0 0 38% 0;background:linear-gradient(0deg,var(--paper) 0%,rgba(37,41,35,.08) 35%),url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1300&q=85') center/cover}.main-nav{box-shadow:0 12px 18px rgba(0,0,0,.28)}}
+
+/* Stronger, scroll-triggered movement; nothing animates into place on page load. */
+@media(prefers-reduced-motion:no-preference){
+  .scroll-reveal{opacity:0;transform:translateY(42px) scale(.975);transition:opacity .9s ease,transform .9s cubic-bezier(.18,.72,.25,1)}
+  .scroll-reveal.is-visible{opacity:1;transform:translateY(0) scale(1)}
+  .dish-card.scroll-reveal:nth-child(3n+2){transition-delay:.12s}
+  .dish-card.scroll-reveal:nth-child(3n){transition-delay:.24s}
+  .gallery-tile:hover img{transform:scale(1.075)}
+  .filter-chip,.gallery-tile,.nav-book{transition:transform .25s ease,background-color .25s ease,color .25s ease,border-color .25s ease}
+  .filter-chip:hover,.nav-book:hover{transform:translateY(-2px)}
+  .reservation-form .submit-button:hover{transform:translateY(-4px)}
+}
+
