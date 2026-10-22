@@ -1,6 +1,58 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Find Aurelle or request a reservation at our Brooklyn neighborhood bistro."><title>Contact & Reservations — Aurelle</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css?v=blue-mobile-20261021"></head>
-<body><header class="site-header"><a class="wordmark" href="index.html">AURELLE<span>NEIGHBORHOOD BISTRO</span></a><button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><i></i><i></i></button><nav class="main-nav"><a href="index.html">Home</a><a href="menu.html">Our menu</a><a href="gallery.html">The space</a><a class="active" href="contact.html">Contact</a><a class="nav-book" href="#reservation">Book a table <span>↗</span></a></nav></header>
-<main><section class="page-heading"><p class="eyebrow">COME BY, STAY A WHILE</p><h1>Let’s make<br><em>an evening of it.</em></h1><p>We’d love to have you. Drop in, call, or send a reservation request.</p></section><section class="contact-layout section-pad" id="reservation"><div class="contact-details"><p class="eyebrow">FIND YOUR WAY HERE</p><h2>Just around<br>the corner.</h2><div class="detail-block"><span>ADDRESS</span><p>184 Wythe Avenue<br>Brooklyn, NY 11249</p><a class="text-link" href="https://maps.google.com/?q=184+Wythe+Avenue+Brooklyn+NY+11249" target="_blank" rel="noreferrer">Get directions ↗</a></div><div class="detail-block"><span>HOURS</span><p>Tuesday – Thursday <b>5–9 PM</b><br>Friday – Saturday <b>5–10 PM</b><br>Sunday <b>4–8 PM</b><br>Monday <b>Closed</b></p></div><div class="detail-block"><span>GIVE US A RING</span><a href="tel:+17185550184">(718) 555-0184</a></div></div><form class="reservation-form"><p class="eyebrow">REQUEST A RESERVATION</p><h2>Your table, your time.</h2><p class="form-intro">We’ll confirm your request by phone or email. For tonight, please call us directly.</p><div class="form-row"><label>Your name<input name="name" autocomplete="name" placeholder="e.g. Alex Morgan" required></label><label>Email address<input name="email" type="email" autocomplete="email" placeholder="you@example.com" required></label></div><div class="form-row"><label>Date<input name="date" type="date" required></label><label>Time<select name="time" required><option value="">Choose a time</option><option>5:00 PM</option><option>5:30 PM</option><option>6:00 PM</option><option>6:30 PM</option><option>7:00 PM</option><option>7:30 PM</option><option>8:00 PM</option><option>8:30 PM</option></select></label></div><div class="form-row"><label>Guests<select name="guests" required><option value="">Number of guests</option><option>1 guest</option><option>2 guests</option><option>3 guests</option><option>4 guests</option><option>5 guests</option><option>6 guests</option></select></label><label>Anything we should know?<input name="notes" placeholder="Allergies, a special occasion…"></label></div><button class="button button-dark submit-button" type="submit">Send reservation request <span>↗</span></button><p class="form-status" role="status" aria-live="polite"></p><small class="form-note">Demo form: submitting shows a confirmation on this page. Connect a booking service to receive real reservations.</small></form></section><section class="map-panel"><div class="map-placeholder"><span class="map-marker">✳</span><p>WILLIAMSBURG · BROOKLYN</p><a href="https://maps.google.com/?q=184+Wythe+Avenue+Brooklyn+NY+11249" target="_blank" rel="noreferrer">Open map ↗</a></div></section></main>
-<footer class="site-footer"><a class="wordmark footer-mark" href="index.html">AURELLE<span>NEIGHBORHOOD BISTRO</span></a><p>Seasonal cooking, warm company.<br>Brooklyn, New York</p><div class="footer-links"><a href="menu.html">Menu</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a><a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram ↗</a></div><small>© 2026 AURELLE · MADE FOR GOOD COMPANY</small></footer><script src="script.js"></script></body></html>
-
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#176da7">
+<meta name="description" content="Find Aurelle or request a reservation at our Brooklyn neighborhood bistro.">
+<title>Contact & Reservations — Aurelle</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23176da7'/%3E%3Ctext x='32' y='44' font-size='36' text-anchor='middle' fill='white' font-family='Georgia,serif'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=blue-20261022">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <a class="wordmark" href="index.html" aria-label="Aurelle home">AURELLE<span>NEIGHBORHOOD BISTRO</span></a>
+  <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav"><i></i><i></i></button>
+  <nav class="main-nav" id="site-nav" aria-label="Main">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Our menu</a>
+    <a href="gallery.html">The space</a>
+    <a class="active" aria-current="page" href="contact.html">Contact</a>
+    <a class="nav-book" href="#reservation">Book a table <span aria-hidden="true">↗</span></a>
+  </nav>
+</header>
+<main id="main">
+  <section class="page-heading"><p class="eyebrow">COME BY, STAY A WHILE</p><h1>Let’s make<br><em>an evening of it.</em></h1><p>We’d love to have you. Drop in, call, or send a reservation request.</p></section>
+  <section class="contact-layout section-pad" id="reservation">
+    <div class="contact-details reveal"><p class="eyebrow">FIND YOUR WAY HERE</p><h2>Just around<br>the corner.</h2>
+      <div class="detail-block"><span>ADDRESS</span><p>184 Wythe Avenue<br>Brooklyn, NY 11249</p><a class="text-link" href="https://maps.google.com/?q=184+Wythe+Avenue+Brooklyn+NY+11249" target="_blank" rel="noopener noreferrer">Get directions <span aria-hidden="true">↗</span></a></div>
+      <div class="detail-block"><span>HOURS</span><p>Tuesday – Thursday <b>5–9 PM</b><br>Friday – Saturday <b>5–10 PM</b><br>Sunday <b>4–8 PM</b><br>Monday <b>Closed</b></p></div>
+      <div class="detail-block"><span>GIVE US A RING</span><a href="tel:+17185550184">(718) 555-0184</a></div>
+    </div>
+    <form class="reservation-form reveal" novalidate>
+      <p class="eyebrow">REQUEST A RESERVATION</p><h2>Your table, your time.</h2>
+      <p class="form-intro">We’ll confirm your request by phone or email. For tonight, please call us directly.</p>
+      <div class="form-row"><label>Your name<input name="name" autocomplete="name" placeholder="e.g. Alex Morgan" required></label><label>Email address<input name="email" type="email" autocomplete="email" placeholder="you@example.com" required></label></div>
+      <div class="form-row"><label>Date<input name="date" type="date" required></label><label>Time<select name="time" required><option value="">Choose a time</option><option value="5:00 PM">5:00 PM</option><option value="5:30 PM">5:30 PM</option><option value="6:00 PM">6:00 PM</option><option value="6:30 PM">6:30 PM</option><option value="7:00 PM">7:00 PM</option><option value="7:30 PM">7:30 PM</option><option value="8:00 PM">8:00 PM</option><option value="8:30 PM">8:30 PM</option></select></label></div>
+      <div class="form-row"><label>Guests<select name="guests" required><option value="">Number of guests</option><option value="1">1 guest</option><option value="2">2 guests</option><option value="3">3 guests</option><option value="4">4 guests</option><option value="5">5 guests</option><option value="6">6 guests</option></select></label><label>Anything we should know?<input name="notes" placeholder="Allergies, a special occasion…"></label></div>
+      <button class="button button-dark submit-button" type="submit">Send reservation request <span aria-hidden="true">↗</span></button>
+      <p class="form-status" role="status" aria-live="polite"></p>
+      <small class="form-note">Demo form: submitting shows a confirmation on this page. Connect a booking service to receive real reservations.</small>
+    </form>
+  </section>
+  <section class="map-panel reveal" aria-label="Map"><div class="map-placeholder"><span class="map-marker" aria-hidden="true">✳</span><p>WILLIAMSBURG · BROOKLYN</p><a href="https://maps.google.com/?q=184+Wythe+Avenue+Brooklyn+NY+11249" target="_blank" rel="noopener noreferrer">Open map ↗</a></div></section>
+</main>
+<footer class="site-footer">
+  <a class="wordmark footer-mark" href="index.html">AURELLE<span>NEIGHBORHOOD BISTRO</span></a>
+  <p>Seasonal cooking, warm company.<br>Brooklyn, New York</p>
+  <div class="footer-links"><a href="menu.html">Menu</a><a href="gallery.html">The space</a><a href="contact.html">Contact</a><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div>
+  <small>© 2026 AURELLE · MADE FOR GOOD COMPANY</small>
+</footer>
+<script src="script.js?v=blue-20261022"></script>
+</body>
+</html>
